@@ -12,7 +12,7 @@ struct AnnouncementsApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                AnnouncementDetailView()
+                AnnouncementDetailView(currentAnnouncement: testAnnouncement)
             }
         }
     }

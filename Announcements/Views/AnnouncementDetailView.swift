@@ -8,35 +8,40 @@
 import SwiftUI
 
 struct AnnouncementDetailView: View {
+    
+    // MARK: Stored properties
+    let currentAnnouncement: Announcement
+    
+    // MARK: Computed properties
     var body: some View {
         ScrollView {
             VStack(spacing: 30) {
 
                 VStack(alignment: .leading, spacing: 5) {
                     HStack {
-                        Text("**Posted by:** David Crispo")
+                        Text("**Posted by:** \(currentAnnouncement.postedBy)")
                         Spacer()
                     }
                     .font(.caption)
                     
-                    Text("4/27/2022")
+                    Text(currentAnnouncement.date)
                         .font(.caption)
                 }
                 
-                RemoteImageView(fromURL: URL(string: "https://www.russellgordon.ca/lcs/2021-22/sheety-demo/airband.jpg")!)
+                RemoteImageView(fromURL: URL(string: currentAnnouncement.imageUrl)!)
 
-                Text("Good morning, all houses should now have a time for an Airbands sound check in the theatre. \n\nSome important reminders:\n\n• The time slots are only 15 minutes, please make sure that you're there on time and you leave your bags/coats in the theatre lobby so we can get everyone through. \n\n• There are pieces of the set still in the theatre, please do not touch any of it.  \n\nIn the words of Martha Graham, \"Dance is the hidden language of the soul\" \n\nThanks everyone!")
+                Text(currentAnnouncement.body)
             }
             .padding(.horizontal)
         }
-        .navigationTitle("Airbands update 🎸")
+        .navigationTitle(currentAnnouncement.title)
     }
 }
 
 struct AnnouncementDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AnnouncementDetailView()
+            AnnouncementDetailView(currentAnnouncement: testAnnouncement)
         }
     }
 }
