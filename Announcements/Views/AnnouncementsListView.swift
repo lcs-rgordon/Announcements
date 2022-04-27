@@ -16,7 +16,9 @@ struct AnnouncementsListView: View {
     var body: some View {
         List(announcementsToShow) { currentListItem in
 
-            ListItemView(currentAnnouncement: currentListItem)
+            NavigationLink(destination: AnnouncementDetailView(currentAnnouncement: currentListItem)) {
+                ListItemView(currentAnnouncement: currentListItem)
+            }
             
         }
         .navigationTitle("Announcements 📢")
