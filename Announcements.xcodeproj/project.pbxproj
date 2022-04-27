@@ -11,6 +11,7 @@
 		817112652819EA9A00E29A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817112642819EA9A00E29A7E /* Assets.xcassets */; };
 		817112682819EA9A00E29A7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817112672819EA9A00E29A7E /* Preview Assets.xcassets */; };
 		817112702819EAED00E29A7E /* AnnouncementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171126F2819EAED00E29A7E /* AnnouncementDetailView.swift */; };
+		817112732819EB6100E29A7E /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817112722819EB3300E29A7E /* RemoteImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817112732819EB6100E29A7E /* RemoteImageView.swift in Sources */,
 				817112702819EAED00E29A7E /* AnnouncementDetailView.swift in Sources */,
 				817112612819EA9900E29A7E /* AnnouncementsApp.swift in Sources */,
 			);
