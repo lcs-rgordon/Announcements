@@ -9,7 +9,7 @@ import Foundation
 
 // Matches structure of a single announcement, as provided here:
 // https://www.russellgordon.ca/lcs/2021-22/sheety-demo/announcement.json
-struct Announcement {
+struct Announcement: Identifiable {
     let postedBy: String
     let date: String
     let title: String
@@ -41,6 +41,15 @@ let testListOfAnnouncements = [
                  title: "SIC Voting Extended 🗳",
                  body: "Good morning.\n\nDue to the fire alarm, the ballot for this morning's voting will stay open until 1:00 PM for anyone who did not get the chance to vote.\n\nYou can access the ballot through your advising group.\n\nThank you.\n\nOG",
                  imageUrl: "https://www.russellgordon.ca/lcs/2021-22/sheety-demo/voting.jpg",
-                 id: 2)
+                 id: 3)
+    ,
+    
+    Announcement(postedBy: "Ms. Tina St. John",
+                 date: "4/26/2022",
+                 title: "Beach League 🏝",
+                 body: "It's ALMOST warm enough to start our BEACH LEAGUE. \n\nIf there are any last minute players/teams that want to join send me a quick note and I'll add you to the schedule. \n\nWe will start the first Saturday in May - BUT if it's nice this weekend you should get practice in with your team ☺️",
+                 imageUrl: "https://www.russellgordon.ca/lcs/2021-22/sheety-demo/volleyball.jpg",
+                 id: 4)
+
     
 ]

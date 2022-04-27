@@ -14,13 +14,10 @@ struct AnnouncementsListView: View {
     
     // MARK: Computed properties
     var body: some View {
-        List {
+        List(announcementsToShow) { currentListItem in
 
             // First announcement
-            ListItemView(currentAnnouncement: announcementsToShow[0])
-            
-            // Second announcement
-            ListItemView(currentAnnouncement: announcementsToShow[1])
+            ListItemView(currentAnnouncement: currentListItem)
             
         }
         .navigationTitle("Announcements 📢")
