@@ -13,6 +13,7 @@
 		817112702819EAED00E29A7E /* AnnouncementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171126F2819EAED00E29A7E /* AnnouncementDetailView.swift */; };
 		817112732819EB6100E29A7E /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817112722819EB3300E29A7E /* RemoteImageView.swift */; };
 		817112762819ECA500E29A7E /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817112752819ECA500E29A7E /* Announcement.swift */; };
+		817112782819F07300E29A7E /* AnnouncementsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817112772819F07300E29A7E /* AnnouncementsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		8171126F2819EAED00E29A7E /* AnnouncementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailView.swift; sourceTree = "<group>"; };
 		817112722819EB3300E29A7E /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		817112752819ECA500E29A7E /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		817112772819F07300E29A7E /* AnnouncementsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				817112712819EB2B00E29A7E /* Helpers */,
 				8171126F2819EAED00E29A7E /* AnnouncementDetailView.swift */,
+				817112772819F07300E29A7E /* AnnouncementsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817112782819F07300E29A7E /* AnnouncementsListView.swift in Sources */,
 				817112762819ECA500E29A7E /* Announcement.swift in Sources */,
 				817112732819EB6100E29A7E /* RemoteImageView.swift in Sources */,
 				817112702819EAED00E29A7E /* AnnouncementDetailView.swift in Sources */,
