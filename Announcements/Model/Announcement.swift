@@ -50,7 +50,7 @@ let testListOfAnnouncements = [
     
     Announcement(postedBy: "Mr. Pete O'Grady",
                  date: "4/26/2022",
-                 title: "SIC Voting Extended 🗳",
+                 title: "SIC Voting Extended Again 🗳",
                  body: "Good morning.\n\nDue to the fire alarm, the ballot for this morning's voting will stay open until 1:00 PM for anyone who did not get the chance to vote.\n\nYou can access the ballot through your advising group.\n\nThank you.\n\nOG",
                  imageUrl: "https://www.russellgordon.ca/lcs/2021-22/sheety-demo/voting.jpg",
                  id: 3)

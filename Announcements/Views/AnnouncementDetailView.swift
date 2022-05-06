@@ -18,6 +18,12 @@ struct AnnouncementDetailView: View {
             VStack(spacing: 30) {
 
                 VStack(alignment: .leading, spacing: 5) {
+                    
+                    Text(currentAnnouncement.title)
+                        .font(.title)
+                        .bold()
+                        .multilineTextAlignment(.leading)
+                    
                     HStack {
                         Text("**Posted by:** \(currentAnnouncement.postedBy)")
                         Spacer()
@@ -34,14 +40,14 @@ struct AnnouncementDetailView: View {
             }
             .padding(.horizontal)
         }
-        .navigationTitle(currentAnnouncement.title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct AnnouncementDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AnnouncementDetailView(currentAnnouncement: testAnnouncement)
+            AnnouncementDetailView(currentAnnouncement: testListOfAnnouncements[1])
         }
     }
 }

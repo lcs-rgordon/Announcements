@@ -42,6 +42,7 @@ struct AnnouncementsListView: View {
 
             }
             .navigationTitle("Announcements 📢")
+            .navigationBarTitleDisplayMode(.large)
             // Runs once when view is loaded
             .task {
                 
