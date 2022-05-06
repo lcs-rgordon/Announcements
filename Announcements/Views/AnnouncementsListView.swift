@@ -14,9 +14,9 @@ struct AnnouncementsListView: View {
     // List of announcements that will be loaded from the Sheety endpoint in JSON format
     @State var announcementsToShow: [Announcement] = []
     
-    // Derived value; a reference to the list of favourite songs
+    // Derived value; a reference to the list of announcements that have been saved
     // The source of truth (original instance) is at the app level
-    @Binding var starred: [Announcement]
+    @Binding var savedAnnouncements: [Announcement]
     
     // MARK: Computed properties
     var body: some View {
@@ -30,8 +30,8 @@ struct AnnouncementsListView: View {
 
                     NavigationLink(destination: {
                         AnnouncementDetailView(currentAnnouncement: currentListItem,
-                                               isStarred: false,
-                                               starred: $starred)
+                                               isSaved: false,
+                                               savedAnnouncements: $savedAnnouncements)
                     }, label: {
                         ListItemView(currentAnnouncement: currentListItem)
                     })
@@ -112,7 +112,7 @@ struct AnnouncementsListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             AnnouncementsListView(announcementsToShow: testListOfAnnouncements,
-                                  starred: .constant([testAnnouncement]))
+                                  savedAnnouncements: .constant([testAnnouncement]))
         }
     }
 }

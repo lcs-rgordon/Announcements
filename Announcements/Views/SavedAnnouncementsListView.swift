@@ -11,8 +11,8 @@ struct SavedAnnouncementsListView: View {
     
     // MARK: Stored properties
     
-    // Derived value; a reference to the list of announcements that are starred
-    @Binding var starred: [Announcement]
+    // Derived value; a reference to the list of announcements that have been saved
+    @Binding var savedAnnouncements: [Announcement]
     
     // MARK: Computed properties
     var body: some View {
@@ -20,8 +20,8 @@ struct SavedAnnouncementsListView: View {
         NavigationView {
             
             VStack {
-                // Show message if no starred announcements
-                if starred.isEmpty {
+                // Show message if no saved announcements
+                if savedAnnouncements.isEmpty {
 
                     Spacer()
                     
@@ -36,14 +36,14 @@ struct SavedAnnouncementsListView: View {
                 } else {
 
                     // Show list of saved announcements
-                    List(starred) { currentListItem in
+                    List(savedAnnouncements) { currentItem in
 
                         NavigationLink(destination: {
-                            AnnouncementDetailView(currentAnnouncement: currentListItem,
-                                                   isStarred: true,
-                                                   starred: $starred)
+                            AnnouncementDetailView(currentAnnouncement: currentItem,
+                                                   isSaved: true,
+                                                   savedAnnouncements: $savedAnnouncements)
                         }, label: {
-                            ListItemView(currentAnnouncement: currentListItem)
+                            ListItemView(currentAnnouncement: currentItem)
                         })
                         
                     }
@@ -59,6 +59,6 @@ struct SavedAnnouncementsListView: View {
 
 struct SavedAnnouncementsListView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedAnnouncementsListView(starred: .constant([testAnnouncement]))
+        SavedAnnouncementsListView(savedAnnouncements: .constant([testAnnouncement]))
     }
 }

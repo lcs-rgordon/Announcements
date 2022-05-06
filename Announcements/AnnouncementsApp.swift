@@ -11,20 +11,20 @@ import SwiftUI
 struct AnnouncementsApp: App {
     
     // Source of truth for the list of saved announcements
-    @State var starred: [Announcement] = []
+    @State var savedAnnouncements: [Announcement] = []
 
     var body: some Scene {
         WindowGroup {
             
             TabView {
 
-                AnnouncementsListView(starred: $starred)
+                AnnouncementsListView(savedAnnouncements: $savedAnnouncements)
                     .tabItem {
                         Image(systemName: "person.wave.2")
                         Text("Announcements")
                     }
                 
-                SavedAnnouncementsListView(starred: $starred)
+                SavedAnnouncementsListView(savedAnnouncements: $savedAnnouncements)
                     .tabItem {
                         Image(systemName: "star.fill")
                         Text("Saved")
