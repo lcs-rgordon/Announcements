@@ -11,9 +11,7 @@ import SwiftUI
 struct AnnouncementsApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                AnnouncementDetailView(currentAnnouncement: testAnnouncement)
-            }
+            AnnouncementsListView()
         }
     }
 }

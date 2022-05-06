@@ -7,9 +7,21 @@
 
 import Foundation
 
-// Matches structure of a single announcement, as provided here:
-// https://www.russellgordon.ca/lcs/2021-22/sheety-demo/announcement.json
-struct Announcement: Identifiable {
+/*
+ Each instance of this structure corresponds to a single row in this spreadsheet:
+ 
+ https://docs.google.com/spreadsheets/d/1yy7ZEUfnW5L2jr_IFKh0Nj1NUrTU7PlsCeFU3z-2_Hc/edit#gid=0
+
+ The `id` property is the row number in the spreadsheet.
+ 
+ Other properties match the columns of the spreadsheet, from left to right.
+
+ The spreadsheet is accessed via this endpoint:
+ 
+ https://api.sheety.co/92d7eb80d996eaeb34616393ebc6ddcf/announcements/list
+ 
+ */
+struct Announcement: Codable, Identifiable {
     let postedBy: String
     let date: String
     let title: String

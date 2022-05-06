@@ -15,6 +15,7 @@
 		817112762819ECA500E29A7E /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817112752819ECA500E29A7E /* Announcement.swift */; };
 		817112782819F07300E29A7E /* AnnouncementsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817112772819F07300E29A7E /* AnnouncementsListView.swift */; };
 		8171127A2819F3A100E29A7E /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817112792819F3A100E29A7E /* ListItemView.swift */; };
+		81DDFF5C28252E6C008DED99 /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DDFF5B28252E6C008DED99 /* Announcements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		817112752819ECA500E29A7E /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		817112772819F07300E29A7E /* AnnouncementsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsListView.swift; sourceTree = "<group>"; };
 		817112792819F3A100E29A7E /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		81DDFF5B28252E6C008DED99 /* Announcements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				817112752819ECA500E29A7E /* Announcement.swift */,
+				81DDFF5B28252E6C008DED99 /* Announcements.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				817112782819F07300E29A7E /* AnnouncementsListView.swift in Sources */,
 				817112762819ECA500E29A7E /* Announcement.swift in Sources */,
 				817112732819EB6100E29A7E /* RemoteImageView.swift in Sources */,
+				81DDFF5C28252E6C008DED99 /* Announcements.swift in Sources */,
 				8171127A2819F3A100E29A7E /* ListItemView.swift in Sources */,
 				817112702819EAED00E29A7E /* AnnouncementDetailView.swift in Sources */,
 				817112612819EA9900E29A7E /* AnnouncementsApp.swift in Sources */,
