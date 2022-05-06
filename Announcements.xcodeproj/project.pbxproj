@@ -19,6 +19,8 @@
 		81DDFF5E28253909008DED99 /* SaveAnnouncementButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DDFF5D28253909008DED99 /* SaveAnnouncementButtonView.swift */; };
 		81DDFF6028253AF2008DED99 /* SavedAnnouncementsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DDFF5F28253AF1008DED99 /* SavedAnnouncementsListView.swift */; };
 		81DDFF6228254309008DED99 /* SpinningStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DDFF6128254309008DED99 /* SpinningStarView.swift */; };
+		81DDFF6428254D8D008DED99 /* SavedAnnouncement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DDFF6328254D8D008DED99 /* SavedAnnouncement.swift */; };
+		81DDFF6628254EED008DED99 /* NewSavedAnnouncement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DDFF6528254EED008DED99 /* NewSavedAnnouncement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		81DDFF5D28253909008DED99 /* SaveAnnouncementButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAnnouncementButtonView.swift; sourceTree = "<group>"; };
 		81DDFF5F28253AF1008DED99 /* SavedAnnouncementsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAnnouncementsListView.swift; sourceTree = "<group>"; };
 		81DDFF6128254309008DED99 /* SpinningStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinningStarView.swift; sourceTree = "<group>"; };
+		81DDFF6328254D8D008DED99 /* SavedAnnouncement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAnnouncement.swift; sourceTree = "<group>"; };
+		81DDFF6528254EED008DED99 /* NewSavedAnnouncement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSavedAnnouncement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			children = (
 				817112752819ECA500E29A7E /* Announcement.swift */,
 				81DDFF5B28252E6C008DED99 /* Announcements.swift */,
+				81DDFF6328254D8D008DED99 /* SavedAnnouncement.swift */,
+				81DDFF6528254EED008DED99 /* NewSavedAnnouncement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 				81DDFF6228254309008DED99 /* SpinningStarView.swift in Sources */,
 				8171127A2819F3A100E29A7E /* ListItemView.swift in Sources */,
 				817112702819EAED00E29A7E /* AnnouncementDetailView.swift in Sources */,
+				81DDFF6628254EED008DED99 /* NewSavedAnnouncement.swift in Sources */,
+				81DDFF6428254D8D008DED99 /* SavedAnnouncement.swift in Sources */,
 				817112612819EA9900E29A7E /* AnnouncementsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

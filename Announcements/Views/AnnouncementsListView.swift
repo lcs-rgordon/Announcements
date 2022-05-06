@@ -75,7 +75,7 @@ struct AnnouncementsListView: View {
         var request = URLRequest(url: url)
         request.setValue("application/json",
                          forHTTPHeaderField: "Accept")
-        request.httpMethod = "GET"
+        request.httpMethod = "GET"  // Getting data from the web server...
         
         // Start a URL session to interact with the endpoint
         let urlSession = URLSession.shared
