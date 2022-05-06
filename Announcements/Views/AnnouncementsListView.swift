@@ -10,7 +10,13 @@ import SwiftUI
 struct AnnouncementsListView: View {
     
     // MARK: Stored properties
+    
+    // List of announcements that will be loaded from the Sheety endpoint in JSON format
     @State var announcementsToShow: [Announcement] = []
+    
+    // Derived value; a reference to the list of favourite songs
+    // The source of truth (original instance) is at the app level
+    @Binding var starred: [Announcement]
     
     // MARK: Computed properties
     var body: some View {
@@ -22,9 +28,13 @@ struct AnnouncementsListView: View {
                 // Shows list of announcements, when there are some to show
                 List(announcementsToShow) { currentListItem in
 
-                    NavigationLink(destination: AnnouncementDetailView(currentAnnouncement: currentListItem)) {
+                    NavigationLink(destination: {
+                        AnnouncementDetailView(currentAnnouncement: currentListItem,
+                                               isStarred: false,
+                                               starred: $starred)
+                    }, label: {
                         ListItemView(currentAnnouncement: currentListItem)
-                    }
+                    })
                     
                 }
                 
@@ -101,7 +111,8 @@ struct AnnouncementsListView: View {
 struct AnnouncementsListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AnnouncementsListView(announcementsToShow: testListOfAnnouncements)
+            AnnouncementsListView(announcementsToShow: testListOfAnnouncements,
+                                  starred: .constant([testAnnouncement]))
         }
     }
 }

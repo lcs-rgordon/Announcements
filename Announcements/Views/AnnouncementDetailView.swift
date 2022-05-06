@@ -12,6 +12,13 @@ struct AnnouncementDetailView: View {
     // MARK: Stored properties
     let currentAnnouncement: Announcement
     
+    // Whether this annoucement is in the Saved list or not
+    @State var isStarred: Bool
+
+    // Derived value; a reference to the list of favourite songs
+    // The source of truth (original instance) is at the app level
+    @Binding var starred: [Announcement]
+
     // MARK: Computed properties
     var body: some View {
         ScrollView {
@@ -37,6 +44,17 @@ struct AnnouncementDetailView: View {
                 RemoteImageView(fromURL: URL(string: currentAnnouncement.imageUrl)!)
 
                 Text(currentAnnouncement.body)
+                
+                Divider()
+                
+                HStack {
+                    StarredButtonView(announcement: currentAnnouncement,
+                                      isStarred: $isStarred,
+                                      starred: $starred)
+                    
+                    Spacer()
+                }
+                .padding(.bottom, 30)
             }
             .padding(.horizontal)
         }
@@ -47,7 +65,9 @@ struct AnnouncementDetailView: View {
 struct AnnouncementDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AnnouncementDetailView(currentAnnouncement: testListOfAnnouncements[1])
+            AnnouncementDetailView(currentAnnouncement: testListOfAnnouncements[1],
+                                   isStarred: false,
+                                   starred: .constant([testAnnouncement]))
         }
     }
 }
